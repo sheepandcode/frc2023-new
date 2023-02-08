@@ -52,9 +52,8 @@ public class Station extends CommandBase {
       
     } else if (actualangle < 0) {
       m_drivebase.drive(-speed, -speed);
-      
-
-  }
+    }
+   }
 
   // Called once the command ends or is interrupted.
   @Override
