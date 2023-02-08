@@ -15,7 +15,6 @@ public class Station extends CommandBase {
   private final Drivebase m_drivebase;
   private final Gyro m_gyro;
   private final Turncontroller m_Turncontroller;
-  boolean Balancemode;
 
   public Station(Drivebase drivebase) {
     // Use addRequirements() here to declare subsystem dependencies.
@@ -50,13 +49,10 @@ public class Station extends CommandBase {
     speed += Math.signum(speed) * 0.1;
     if (actualangle > 0) {
       m_drivebase.drive(speed, speed);
-      Balancemode = false;
+      
     } else if (actualangle < 0) {
       m_drivebase.drive(-speed, -speed);
-      Balancemode = false;
-    } else {
-      Balancemode = true;
-    }
+      
 
   }
 
